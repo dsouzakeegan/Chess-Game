@@ -25,14 +25,6 @@ app.get("/", (req, res) => {
 io.on("connection", function(socket) {
     console.log("connected");
 
-    //uniquesocket.on("giselle", function() {
-        ///console.log("giselle received");
-        //io.emit("giselle fernandes")
-    //})
-    // uniquesocket.on("disconnect", function(){
-    //     console.log("disconnected");
-    // })
-
     //if not there then create
     if (!players.white) {
         players.white = socket.id;
