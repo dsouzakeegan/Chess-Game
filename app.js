@@ -38,7 +38,7 @@ io.on("connection", function(socket) {
         players.white = socket.id;
         socket.emit("playerRole", "w");
     } else if (!players.black) {
-        socket.black = socket.id;
+        players.black = socket.id;
         socket.emit("playerRole", "b");
     } else {
         socket.emit("spectatorRole");
